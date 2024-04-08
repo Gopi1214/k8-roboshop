@@ -23,7 +23,7 @@ spec:
     spec:    
       containers:
       - name: mongodb
-        image: mongodb/gopi1214:v1
+        image: gopi1214/mongodb:v1
         imagePullPolicy: Always
 ---
 apiVersion: v1

@@ -1,4 +1,4 @@
-appVersion: v1
+apiVersion: v1
 kind: ConfigMap
 metadata:
   name: cart
@@ -6,7 +6,7 @@ metadata:
 data:
   MONGO: "true"
 ---
-appVersion: apps/v1
+apiVersion: apps/v1
 kind: Pod
 metadata:
   name: cart
@@ -37,7 +37,7 @@ spec:
         - configMapRef:
             name: cart
 ---
-appVersion: v1
+apiVersion: v1
 kind: Service
 metadata:
   name: cart

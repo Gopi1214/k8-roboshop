@@ -5,9 +5,8 @@ metadata:
   namespace: roboshop
 data:
   REDIS_HOST: "redis"
-  CATALOGUE_HOST: "CATALOGUE_HOST"
+  CATALOGUE_HOST: "catalogue"
   CATALOGUE_PORT: "8080"
-
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -20,7 +19,7 @@ metadata:
     tier: app
 spec:
   replicas: 1
-  selector: 
+  selector:
     matchLabels: # these labels are used to find the pods
       app: cart
       project: roboshop
@@ -54,8 +53,3 @@ spec:
   - protocol: TCP
     port: 8080 #service-port
     targetPort: 8080 #container-port
-  
-  
-    
-        
-        

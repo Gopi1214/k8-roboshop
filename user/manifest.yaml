@@ -1,4 +1,4 @@
-appVersion: v1
+apiVersion: v1
 kind: ConfigMap
 metadata:
   name: user
@@ -6,8 +6,8 @@ metadata:
 data:
   MONGO: "true"
 ---
-appVersion: apps/v1
-kind: Pod
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: user
   namespace: roboshop
@@ -37,7 +37,7 @@ spec:
         - configMapRef:
             name: user
 ---
-appVersion: v1
+apiVersion: v1
 kind: Service
 metadata:
   name: user

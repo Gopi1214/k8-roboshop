@@ -7,7 +7,7 @@ data:
   MONGO: "true"
 ---
 apiVersion: apps/v1
-kind: Pod
+kind: Deployment
 metadata:
   name: catalogue
   namespace: roboshop
